@@ -13,6 +13,18 @@
   }
 }
 
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  list-style-type: none;
+  margin: 1rem;
+}
+
+li {
+  margin: 1rem;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
