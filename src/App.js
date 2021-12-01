@@ -36,7 +36,7 @@ function App() {
               <ul>
                   <li><NavLink exact activeClassName="app-link" to="/">Home</NavLink></li>
                   <li><NavLink exact activeClassName="app-link" to="/blogposts">Blogposts</NavLink></li>
-                  <li><NavLink activeClassName="app-link" to="/producten/login">Login</NavLink></li>
+                  <li><NavLink activeClassName="app-link" to="/login">Login</NavLink></li>
               </ul>
           </nav>
         <Switch>
