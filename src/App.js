@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Switch, Route, NavLink, useHistory, Redirect } from "react-router-dom";
+import React, {useState} from 'react';
+import {Switch, Route, NavLink, useHistory, Redirect} from "react-router-dom";
 import './App.css';
 import Home from "./pages/Home";
 import Blogposts from "./pages/Blogposts";
 import Login from "./pages/Login";
+import Blog from "./pages/Blog";
 
 
 // STAPPENPLAN PAGINA COMPONENT MAKEN
@@ -27,31 +28,34 @@ import Login from "./pages/Login";
 // 5. Zorg ervoor dat er een link en titel voor iedere post wordt gegenereerd
 
 function App() {
-  // We houden in de state bij of iemand is "ingelogd" (simpele versie)
-  const [isAuthenticated, toggleIsAuthenticated ] = useState(false);
+    // We houden in de state bij of iemand is "ingelogd" (simpele versie)
+    const [isAuthenticated, toggleIsAuthenticated] = useState(false);
 
-  return (
-      <>
-          <nav>
-              <ul>
-                  <li><NavLink exact activeClassName="app-link" to="/">Home</NavLink></li>
-                  <li><NavLink exact activeClassName="app-link" to="/blogposts">Blogposts</NavLink></li>
-                  <li><NavLink activeClassName="app-link" to="/login">Login</NavLink></li>
-              </ul>
-          </nav>
-        <Switch>
-            <Route exact path="/">
-                <Home />
-            </Route>
-            <Route exact path="/blogposts">
-                <Blogposts />
-            </Route>
-            <Route exact path="/login">
-                <Login />
-            </Route>
-        </Switch>
-      </>
-  );
+    return (
+        <>
+            <nav>
+                <ul>
+                    <li><NavLink exact activeClassName="app-link" to="/">Home</NavLink></li>
+                    <li><NavLink exact activeClassName="app-link" to="/blogposts">Blogposts</NavLink></li>
+                    <li><NavLink activeClassName="app-link" to="/login">Login</NavLink></li>
+                </ul>
+            </nav>
+            <Switch>
+                <Route exact path="/">
+                    <Home/>
+                </Route>
+                <Route exact path="/blogposts">
+                    <Blogposts/>
+                </Route>
+                <Route exact path="/login">
+                    <Login/>
+                </Route>
+                <Route path="/blog/:blogId">
+                    <Blog/>
+                </Route>
+            </Switch>
+        </>
+    );
 }
 
 export default App;

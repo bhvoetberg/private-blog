@@ -5,10 +5,8 @@ function Login() {
     const history = useHistory();
 
     function handleClick() {
-        // const userLoggedIn = false;
+        const userLoggedIn = false;
         history.push('/blogposts');
-        console.log("Hallo");
-        // console.log(user);
     }
 
     return (
