@@ -1,11 +1,14 @@
 import React from 'react';
 import { useHistory} from 'react-router-dom';
+import app from "../App";
+
 
 function Login() {
     const history = useHistory();
 
     function handleClick() {
-        const userLoggedIn = false;
+        // toggleIsAuthenticated(!isAuthenticated);
+        // console.log(isAuthenticated);
         history.push('/blogposts');
     }
 
